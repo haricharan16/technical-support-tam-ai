@@ -1,0 +1,129 @@
+{
+  "summary": {
+    "total": 10,
+    "passed": 8,
+    "mean_quality_score": 0.95
+  },
+  "results": [
+    {
+      "id": "TKT-10050",
+      "task": "triage",
+      "passed": true,
+      "quality_score": 0.98,
+      "checks": {
+        "valid_schema": true,
+        "priority_accepted": true,
+        "team_present": true,
+        "response_present": true
+      }
+    },
+    {
+      "id": "TKT-10000",
+      "task": "triage",
+      "passed": true,
+      "quality_score": 1.0,
+      "checks": {
+        "valid_schema": true,
+        "priority_accepted": true,
+        "team_present": true,
+        "response_present": true
+      }
+    },
+    {
+      "id": "TKT-10001",
+      "task": "triage",
+      "passed": false,
+      "quality_score": 1.0,
+      "checks": {
+        "valid_schema": true,
+        "priority_accepted": false,
+        "team_present": true,
+        "response_present": true
+      }
+    },
+    {
+      "id": "TKT-10004",
+      "task": "triage",
+      "passed": false,
+      "quality_score": 1.0,
+      "checks": {
+        "valid_schema": true,
+        "priority_accepted": false,
+        "team_present": true,
+        "response_present": true
+      }
+    },
+    {
+      "id": "adversarial-ambiguous",
+      "task": "triage",
+      "passed": true,
+      "quality_score": 1.0,
+      "checks": {
+        "valid_schema": true,
+        "priority_accepted": true,
+        "team_present": true,
+        "response_present": true
+      }
+    },
+    {
+      "id": "ACC-3033",
+      "task": "account_brief",
+      "passed": true,
+      "quality_score": 1.0,
+      "checks": {
+        "three_sections": true,
+        "risk_expectation": true,
+        "ticket_quotes_present": true,
+        "missing_data_graceful": true
+      }
+    },
+    {
+      "id": "ACC-3336",
+      "task": "account_brief",
+      "passed": true,
+      "quality_score": 1.0,
+      "checks": {
+        "three_sections": true,
+        "risk_expectation": true,
+        "ticket_quotes_present": true,
+        "missing_data_graceful": true
+      }
+    },
+    {
+      "id": "ACC-2944",
+      "task": "account_brief",
+      "passed": true,
+      "quality_score": 0.5,
+      "checks": {
+        "three_sections": true,
+        "risk_expectation": true,
+        "ticket_quotes_present": true,
+        "missing_data_graceful": true
+      }
+    },
+    {
+      "id": "ACC-7893",
+      "task": "account_brief",
+      "passed": true,
+      "quality_score": 0.99,
+      "checks": {
+        "three_sections": true,
+        "risk_expectation": true,
+        "ticket_quotes_present": true,
+        "missing_data_graceful": true
+      }
+    },
+    {
+      "id": "adversarial-missing-account",
+      "task": "account_brief",
+      "passed": true,
+      "quality_score": 1.0,
+      "checks": {
+        "three_sections": true,
+        "risk_expectation": true,
+        "ticket_quotes_present": true,
+        "missing_data_graceful": true
+      }
+    }
+  ]
+}

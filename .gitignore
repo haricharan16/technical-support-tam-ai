@@ -1,0 +1,26 @@
+@'
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+secrets*.json
+# Provided or local datasets
+data/
+
+# Knowledge base
+knowledge-base/
+
+# Python environments and caches
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Generated local outputs
+data/kb_chunks.json
+work/
+
+'@ | Set-Content -Encoding utf8 .gitignore
