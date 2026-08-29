@@ -6,8 +6,6 @@ Assignment implementation for a production-minded support-ticket triage agent an
 
 ### Task 1: Support Ticket Triage
 
-```text
-## Ticket Processing Flow
 
 ```text
 ┌──────────────────────────────────────────────┐
