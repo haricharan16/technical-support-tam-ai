@@ -79,7 +79,7 @@ Assignment implementation for a production-minded support-ticket triage agent an
 ┌─────────────────────────────────────────────────────────────┐
 │                      FastAPI Response                       │
 └─────────────────────────────────────────────────────────────┘
-```
+
 
 ```
 Set `LLM_PROVIDER=openai` and add `OPENAI_API_KEY` to `.env` for Responses API generation. The supplied `.env.example` uses `gpt-5.6-luna`. Without a `.env` file, the app defaults to deterministic mode so tests remain repeatable. Pydantic validation and deterministic P1 rules remain mandatory guardrails.
