@@ -4,7 +4,7 @@ Assignment implementation for a production-minded support-ticket triage agent an
 
 ## Architecture
 
-### Task 1: Support Ticket Triage
+## Support Ticket Triage
 
 
 ```text
