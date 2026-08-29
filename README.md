@@ -7,46 +7,82 @@ Assignment implementation for a production-minded support-ticket triage agent an
 ### Task 1: Support Ticket Triage
 
 ```text
-Ticket input
-     │
-     ▼
-Pydantic input validation
-     │
-     ▼
-BM25 knowledge-base retrieval
-     │
-     ▼
-Deterministic priority policy and routing
-     │
-     ▼
-Optional OpenAI Responses API generation
-     │
-     ▼
-Pydantic output validation
-     │
-     ▼
-FastAPI response
+## Ticket Processing Flow
 
+```text
+┌──────────────────────────────────────────────┐
+│                 Ticket Input                 │
+└──────────────────────────────────────────────┘
+                       │
+                       ▼
+┌──────────────────────────────────────────────┐
+│          Pydantic Input Validation           │
+└──────────────────────────────────────────────┘
+                       │
+                       ▼
+┌──────────────────────────────────────────────┐
+│       BM25 Knowledge-Base Retrieval          │
+└──────────────────────────────────────────────┘
+                       │
+                       ▼
+┌──────────────────────────────────────────────┐
+│   Deterministic Priority Policy and Routing  │
+└──────────────────────────────────────────────┘
+                       │
+                       ▼
+┌──────────────────────────────────────────────┐
+│  Optional OpenAI Responses API Generation    │
+└──────────────────────────────────────────────┘
+                       │
+                       ▼
+┌──────────────────────────────────────────────┐
+│          Pydantic Output Validation          │
+└──────────────────────────────────────────────┘
+                       │
+                       ▼
+┌──────────────────────────────────────────────┐
+│               FastAPI Response               │
+└──────────────────────────────────────────────┘
+```
 
-Account ID
-     │
-     ▼
-Account summary + dataset-relative 90-day ticket retrieval
-     │
-     ▼
-Deterministic account-health and risk detection
-     │
-     ▼
-Evidence extraction with direct ticket quotes
-     │
-     ▼
-Optional two-step OpenAI Responses API chain
-     │
-     ▼
-Pydantic output validation + deterministic fallback
-     │
-     ▼
-FastAPI response
+## Account Health Analysis Flow
+
+```text
+┌─────────────────────────────────────────────────────────────┐
+│                          Account ID                         │
+└─────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────┐
+│ Account Summary + Dataset-Relative 90-Day Ticket Retrieval  │
+└─────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────┐
+│     Deterministic Account-Health and Risk Detection         │
+└─────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────┐
+│     Evidence Extraction with Direct Ticket Quotes           │
+└─────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────┐
+│    Optional Two-Step OpenAI Responses API Chain             │
+└─────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────┐
+│ Pydantic Output Validation + Deterministic Fallback         │
+└─────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────┐
+│                      FastAPI Response                       │
+└─────────────────────────────────────────────────────────────┘
+```
+
 ```
 Set `LLM_PROVIDER=openai` and add `OPENAI_API_KEY` to `.env` for Responses API generation. The supplied `.env.example` uses `gpt-5.6-luna`. Without a `.env` file, the app defaults to deterministic mode so tests remain repeatable. Pydantic validation and deterministic P1 rules remain mandatory guardrails.
 
